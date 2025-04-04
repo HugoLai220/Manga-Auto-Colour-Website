@@ -12,7 +12,7 @@ const uploadManager = {
 
         // Set a default original image
         setTimeout(() => {
-            document.getElementById('originalImage').src = '';
+            document.getElementById('originalImage').src = 'image/B&W input.png';
         }, 500);
     }
 };
