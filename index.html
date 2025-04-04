@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Manga Automatic Colorization System">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manga Automatic Colorization Website</title>
+    <link rel="stylesheet" type="text/css" href="mystyle.css">
+</head>
+
+<body>
+    <div class="app-container">
+        <h1 class="title">Manga Automatic Colorization</h1>
+
+        <div class="style-selection">
+            <h2>Step 1: Choose Coloring Style</h2>
+            <div class="style-options">
+                <div class="style-option" onclick="styleManager.selectStyle(this, 'hunter')">
+                    <img src="image/Hunter X Hunter.png" alt="Hunter X Hunter Style">
+                    <div class="style-name">Hunter X Hunter Style</div>
+                </div>
+                <div class="style-option" onclick="styleManager.selectStyle(this, 'naruto')">
+                    <img src="image/Naruto.jpg" alt="Naruto Style">
+                    <div class="style-name">Naruto Style</div>
+                </div>
+                <div class="style-option" onclick="styleManager.selectStyle(this, 'shadow')">
+                    <img src="image/Shadows_House_logo_EN.webp" alt="Shadows House Style">
+                    <div class="style-name">Shadows House Style</div>
+                </div>
+            </div>
+        </div>
+
+        <h2>Step 2: Upload Black and White Manga Image</h2>
+        <div class="upload-area" id="uploadArea" onclick="uploadManager.simulateFileUpload()">
+            <div class="upload-icon">📁</div>
+            <p>Click to upload a manga image or drag and drop file here</p>
+            <p>Supports .png formats only</p>
+        </div>
+
+        <div style="text-align: center;">
+            <button class="btn" onclick="processingManager.startProcessing()">Start Colorization</button>
+        </div>
+
+        <div class="processing-container" id="processingContainer">
+            <h2>Processing...</h2>
+            <div class="progress-bar">
+                <div class="progress" id="progressBar"></div>
+            </div>
+            <p id="processingStatus">Initializing model...</p>
+        </div>
+
+        <div class="result-container" id="resultContainer">
+            <h2>Colorization Complete!</h2>
+            <div class="image-comparison">
+                <div class="image-card">
+                    <img src="image/B&W input.png" alt="Original Image" id="originalImage">
+                    <div class="image-label">Original Black &amp; White Image</div>
+                </div>
+                <div class="image-card">
+                    <img src="https://via.placeholder.com/500/cccccc/000000?text=Colored" alt="Colorized Image"
+                        id="coloredImage">
+                    <div class="image-label">Automatic Colorization Result</div>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 20px;">
+                <button class="btn" onclick="resultManager.downloadResult()">Download Result</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/utils.js"></script>
+    <script src="js/styleManager.js"></script>
+    <script src="js/uploadManager.js"></script>
+    <script src="js/processingManager.js"></script>
+    <script src="js/resultManager.js"></script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>
