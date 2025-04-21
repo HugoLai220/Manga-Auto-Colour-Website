@@ -1,10 +1,5 @@
-/**
- * Manages the result display and download functionality
- */
 const resultManager = {
-    /**
-     * Show the colorization result
-     */
+
     showResult: function () {
         // Hide processing interface, show results interface
         utils.hideElement('processingContainer');
@@ -26,11 +21,8 @@ const resultManager = {
         }
     },
 
-    /**
-     * Download the colorization result
-     * In a real application, this would trigger an actual download
-     */
+
     downloadResult: function () {
-        alert('In a real application, this would download the colorized image. This is a demonstration simulation.');
+        alert('In a real application, you can download the colorized image from here.);
     }
 };
