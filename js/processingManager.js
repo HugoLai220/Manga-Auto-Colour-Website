@@ -1,15 +1,7 @@
-/**
- * Manages the image processing and colorization
- */
 const processingManager = {
-    /**
-     * The progress bar interval ID
-     */
+
     progressInterval: null,
 
-    /**
-     * Start the colorization process
-     */
     startProcessing: function () {
         const selectedStyle = styleManager.getSelectedStyle();
 
