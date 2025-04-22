@@ -21,8 +21,7 @@ const resultManager = {
         }
     },
 
-
     downloadResult: function () {
-        alert('In a real application, you can download the colorized image from here.);
+        alert('In a real application, you can download the colorized image from here.');
     }
 };
