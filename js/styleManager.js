@@ -1,10 +1,4 @@
-/**
- * Manages the style selection functionality
- */
 const styleManager = {
-    /**
-     * The currently selected style
-     */
     selectedStyle: '',
 
     /**
