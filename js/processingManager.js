@@ -1,5 +1,4 @@
 const processingManager = {
-
     progressInterval: null,
 
     startProcessing: function () {
@@ -10,10 +9,8 @@ const processingManager = {
             return;
         }
 
-        // Show processing interface
         utils.showElement('processingContainer');
 
-        // Simulate progress bar
         let progress = 0;
         const progressBar = document.getElementById('progressBar');
         const statusText = document.getElementById('processingStatus');
@@ -36,7 +33,6 @@ const processingManager = {
             if (progress >= 100) {
                 clearInterval(this.progressInterval);
 
-                // Slight delay before showing results
                 setTimeout(() => {
                     resultManager.showResult();
                 }, 700);
