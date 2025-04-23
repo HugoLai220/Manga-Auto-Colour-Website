@@ -5,16 +5,16 @@
     <meta charset="UTF-8">
     <meta name="description" content="Manga Automatic Colorization System">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Manga Automatic Colorization Website</title>
+    <title>Manga Automatic Colourization Website</title>
     <link rel="stylesheet" type="text/css" href="mystyle.css">
 </head>
 
 <body>
     <div class="app-container">
-        <h1 class="title">Manga Automatic Colorization</h1>
+        <h1 class="title">Manga Automatic Colourization</h1>
 
         <div class="style-selection">
-            <h2>Step 1: Choose Coloring Style</h2>
+            <h2>Step 1: Choose Colouring Style</h2>
             <div class="style-options">
                 <div class="style-option" onclick="styleManager.selectStyle(this, 'hunter')">
                     <img src="image/Hunter X Hunter.png" alt="Hunter X Hunter Style">
@@ -39,7 +39,7 @@
         </div>
 
         <div style="text-align: center;">
-            <button class="btn" onclick="processingManager.startProcessing()">Start Colorization</button>
+            <button class="btn" onclick="processingManager.startProcessing()">Start Colourization</button>
         </div>
 
         <div class="processing-container" id="processingContainer">
@@ -51,7 +51,7 @@
         </div>
 
         <div class="result-container" id="resultContainer">
-            <h2>Colorization Complete!</h2>
+            <h2>Colourization Complete!</h2>
             <div class="image-comparison">
                 <div class="image-card">
                     <img src="image/B&W input.png" alt="Original Image" id="originalImage">
@@ -60,7 +60,7 @@
                 <div class="image-card">
                     <img src="https://via.placeholder.com/500/cccccc/000000?text=Colored" alt="Colorized Image"
                         id="coloredImage">
-                    <div class="image-label">Automatic Colorization Result</div>
+                    <div class="image-label">Automatic Colourization Result</div>
                 </div>
             </div>
             <div style="text-align: center; margin-top: 20px;">
